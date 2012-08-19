@@ -1,0 +1,45 @@
+#container.row-fluid
+  #left-panel.span3
+    %ul.nav.nav-tabs
+      %li.active
+        %a{ :href => '#home', :'data-toggle' => 'tab' }
+          %h3='Playlists'
+      %li
+        %a{ :href => '#profile', :'data-toggle' => 'tab' }
+          %h3='Subs'
+    .login-msg
+    .well#well
+      %ul#playlists.nav.nav-list
+
+  #mid-panel.span6
+    #mid-container
+      %table
+        %tr
+          %td
+            %h1= raw 'Vekii&nbsp;'
+          %td#search-container
+            %form#search-form
+            %input#search-input{ :type => 'text', :placeholder => 'Search' }
+          %td
+            #login-or-settings-btn
+      #yt-api-player-wrapper
+        #yt-api-player
+        #add-to-playlist-ddm
+        %a#replay-btn.btn{:href => 'javascript:replay()'}='Replay'
+
+  #right-panel.span3
+    %ul.nav.nav-tabs
+      %li.active
+        %a{:href =>'#Suggested', :'data-toggle' => 'tab'}
+          %h3='Suggested'
+      %li
+        %a{:href =>'#Home', :'data-toggle' => 'tab'}
+          %h3='Queue'
+      %li
+        %a{:href =>'#Home', :'data-toggle' => 'tab'}
+          %h3
+            Results&nbsp;
+            %i.icon-remove.padding-icon-remove
+    .well
+      %ul#recommended.nav.nav-list
+      
