@@ -16,4 +16,4 @@ $(document).ready ->
     render: ->
       @$el.html JST['login_btn']()
 
-   login_button_view = new Login_Button_View(el: $("#login-or-settings-btn"));
+   login_button_view = new Login_Button_View({ el: $("#login-or-settings-btn") });

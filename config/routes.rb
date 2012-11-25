@@ -57,4 +57,5 @@ Vekii20::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   root :to => 'application#vekii'
+  get 'sign_in' => 'application#sign_in', :as => 'sign_in'
 end

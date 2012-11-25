@@ -1,3 +1,5 @@
+= render :partial => 'session_vars'
+
 #container.row-fluid
   #left-panel.span3
     %ul.nav.nav-tabs
@@ -19,13 +21,14 @@
             %h1= raw 'Vekii&nbsp;'
           %td#search-container
             %form#search-form
-            %input#search-input{ :type => 'text', :placeholder => 'Search' }
+            %input#search-input{ :type => 'text', :placeholder => '' }
           %td
-            #login-or-settings-btn
+            %a#login-btn.btn{ :href => @goog_request_token_path }= 'Log In'
+            #sign-up-btn.btn= 'Sign Up'
       #yt-api-player-wrapper
         #yt-api-player
         #add-to-playlist-ddm
-        %a#replay-btn.btn{:href => 'javascript:replay()'}='Replay'
+        %a#replay-btn.btn{ :href => 'javascript:replay()' }= 'Replay'
 
   #right-panel.span3
     %ul.nav.nav-tabs
